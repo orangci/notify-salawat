@@ -20,4 +20,8 @@ A Nix flake for NixOS and home-manager is coming soon.
 - `-g`, `--gap`: Gap in minutes between the adhān and iqāma notifications. Default is 15.
 
 ## License
-[GNU GPL v3](./LICENSE).
+- [License: GNU AGPLv3](./LICENSE)
+
+## Specifications
+- This project follows the [Semantic Versioning 2.0.0](https://semver.org/) specification.
+- This project follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
