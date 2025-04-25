@@ -1,7 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # SPDX-FileCopyrightText: orangc
 from datetime import datetime, timedelta
-import subprocess, os, argparse, time, json, urllib.request
+import subprocess
+import argparse
+import time
+import json
+import urllib.request
 
 icon_path = f"{subprocess.check_output(['pwd']).decode('utf-8').strip()}/icon.png"
 
@@ -83,5 +87,5 @@ args = parser.parse_args()
 
 print("\033[1mSuccess! If all goes well, you'll be notified at the adhān and iqāma of each salah, insha'allah. \033[0m\n")
 if not args.init_notif_disable:
-    subprocess.run(["notify-send", f"pyminaret", "Initialized pyminaret. Disable this notification with -n.", "-i", icon_path, "-a", "pyminaret"])
+    subprocess.run(["notify-send", "pyminaret", "Initialized pyminaret. Disable this notification with -n.", "-i", icon_path, "-a", "pyminaret"])
 main(args.city, args.country.replace(" ", "+"), args.iqama, args.gap - 1)
